@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
-import { Mail } from 'lucide-react'
+import { Mail, Settings, Monitor, Atom, Clock } from 'lucide-react'
 import profileImg from '../assets/profile.jpg'
 
 function Home() {
   const features = [
-    { title: 'Clean Code', desc: 'Write maintainable and scalable code' },
-    { title: 'Responsive Design', desc: 'Works on all devices' },
-    { title: 'Modern Technologies', desc: 'React, JavaScript, etc.' },
-    { title: 'Always Learning', desc: 'Growing every day' },
+    { icon: Settings, title: 'Clean Code', desc: 'Write maintainable and scalable code' },
+    { icon: Monitor, title: 'Responsive Design', desc: 'Works on all devices' },
+    { icon: Atom, title: 'Modern Technologies', desc: 'React, JavaScript, etc.' },
+    { icon: Clock, title: 'Always Learning', desc: 'Growing every day' },
   ]
 
   return (
@@ -55,8 +55,10 @@ function Home() {
       <section className="bg-gray-50 py-12 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {features.map(function (f) {
+            const Icon = f.icon
             return (
-              <div key={f.title}>
+              <div key={f.title} className="flex flex-col items-center">
+                <Icon className="text-blue-600 mb-2" size={28} />
                 <h3 className="font-semibold text-gray-800">{f.title}</h3>
                 <p className="text-gray-500 text-sm">{f.desc}</p>
               </div>
