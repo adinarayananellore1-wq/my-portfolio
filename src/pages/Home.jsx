@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Mail } from 'lucide-react'
+import profileImg from '../assets/profile.jpg'
 
 function Home() {
   const features = [
@@ -42,9 +43,11 @@ function Home() {
           </div>
 
           <div className="relative flex justify-center">
-            <div className="w-72 h-72 md:w-96 md:h-96 bg-blue-600/20 rounded-full flex items-center justify-center text-gray-400">
-              Photo coming soon
-            </div>
+            <img
+              src={profileImg}
+              alt="Adhi"
+              className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover object-top"
+            />
           </div>
         </div>
       </section>

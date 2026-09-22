@@ -1,3 +1,5 @@
+import profileImg from '../assets/profile.jpg'
+
 function About() {
   const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Git & GitHub']
   const interests = ['Web Development', 'Problem Solving', 'Travel & Exploration', 'Photography']
@@ -27,9 +29,11 @@ function About() {
           </button>
         </div>
 
-        <div className="w-full h-64 bg-gray-200 rounded-2xl flex items-center justify-center text-gray-400">
-          Photo coming soon
-        </div>
+        <img
+          src={profileImg}
+          alt="Adhi"
+          className="w-full h-64 rounded-2xl object-cover object-top"
+        />
       </div>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
