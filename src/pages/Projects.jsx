@@ -1,25 +1,28 @@
 function Projects() {
   const projects = [
     {
-      title: "Project One",
-      desc: "Short description of what this project does and the problem it solves.",
-      tech: ["React", "CSS", "JavaScript"],
+      title: "Weather Dashboard",
+      desc: "A responsive weather app that shows real-time forecasts for any city using a public weather API.",
+      tech: ["React", "Tailwind CSS", "API"],
       demo: "#",
       github: "#",
+      image: "https://picsum.photos/seed/weather/400/300",
     },
     {
-      title: "Project Two",
-      desc: "Short description of what this project does and the problem it solves.",
-      tech: ["React", "CSS", "JavaScript"],
+      title: "Task Manager",
+      desc: "A to-do list app to add, complete and delete tasks, with data saved so nothing is lost on refresh.",
+      tech: ["React", "JavaScript", "CSS"],
       demo: "#",
       github: "#",
+      image: "https://picsum.photos/seed/tasks/400/300",
     },
     {
-      title: "Project Three",
-      desc: "Short description of what this project does and the problem it solves.",
-      tech: ["HTML", "CSS", "JavaScript"],
+      title: "Recipe Finder",
+      desc: "Search and browse recipes by ingredient, with clean cards showing cook time and instructions.",
+      tech: ["React", "Tailwind CSS", "API"],
       demo: "#",
       github: "#",
+      image: "https://picsum.photos/seed/recipe/400/300",
     },
   ];
 
@@ -39,9 +42,11 @@ function Projects() {
           {projects.map(function (p) {
             return (
               <div key={p.title} className="border rounded-xl overflow-hidden shadow-sm">
-                <div className="h-40 bg-gray-200 flex items-center justify-center text-gray-400">
-                  Project Image
-                </div>
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="w-full h-40 object-cover"
+                />
                 <div className="p-5">
                   <h3 className="font-semibold text-lg mb-2">{p.title}</h3>
                   <p className="text-gray-600 text-sm mb-3">{p.desc}</p>
